@@ -56,11 +56,11 @@ doesIntersect(X,Y) :-
     intersection(X,Y,Z),
     dif(Z,[]).
 
-%checks if the game shares a platform with a game you already play
+% checks if the game shares a platform with a game you already play
 is_valid_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _, _, CurrentPlatforms), (doesIntersect(Platforms, CurrentPlatforms); is_valid_platform(T, GameName)).
-%checks if the game shares a game type with a game you already play
+% checks if the game shares a game type with a game you already play
 is_valid_game_type([H|T], GameName) :- game(GameName, _ , GameType, _), game(H, _, OtherGameType, _), (not(dif(GameType, OtherGameType)); is_valid_game_type(T, GameName)).
-%checks if the game shares a company a game you already play
+% checks if the game shares a company a game you already play
 is_valid_company([H|T], GameName) :- game(GameName, Company , _, _), game(H, OtherCompany, _, _), (not(dif(Company, OtherCompany)); is_valid_company(T, GameName)).
 
 % The following code contains the videogames and their descriptions that will be used for queries 
