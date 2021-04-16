@@ -69,7 +69,9 @@ game("World of Warcraft", "Blizzard Entertainment", "MMORPG", ["PC", "macOS"]).
 game("Overwatch", "Blizzard Entertainment", "FPS", ["PC", "Console"]).
 game("Among Us", "InnerSloth LLC", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("Fortnite", "Epic Games", "Battle-Royale", ["Console", "PC", "Mobile"]).
-game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS", "Mobile"]).
+game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS"]).
+game("LEGO Brawls", "Red Games Co.", "Fighter", ["macOS"]).
+game("LEGO Star Wars Series", "Warner Bros. Interactive Entertainment", "Action-Adventure", ["PC", "macOS", "Console"]).
 game("Grand Theft Auto Series", "Rockstar Games", "Sandbox", ["PC", "Console"]).
 game("The Legend of Zelda Series", "Nintendo", "Action-Adventure", ["Console"]).    
 game("Animal Crossing: New Horizons", "Nintendo", "Sandbox", ["Console"]).
