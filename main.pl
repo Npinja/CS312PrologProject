@@ -4,7 +4,7 @@
 
 % WE ARE MAKING A GAME RECOMMENDER
 % Takes a list of games u play, recommends game you might want to try
-% TYPE -> MMORPG, FPS, SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLE, BATTLE-ROYALE, FIGHTER
+% TYPE -> MASSIVE-MULTIPLAYER-ONLINE-ROLE-PLAYING-GAME (MMORPG), FIRST-PERSON-SHOOTER (FPS), SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLE, BATTLE-ROYALE, FIGHTER, REAL-TIME-STRATEGY (RTS)
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
@@ -33,8 +33,8 @@ filter_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _,
 
 % The following code contains the videogames and their descriptions that will be used for queries 
 game("Valorant", "Riot", "FPS", ["PC"]).
-game("League Of Legends", "MMORPG", "Riot", ["PC", "macOS"]).
-game("League Of Legends: Wild Rift", "MMORPG", "Riot", ["Mobile"]).
+game("League Of Legends", "Riot", "MMORPG", ["PC", "macOS"]).
+game("League Of Legends: Wild Rift", "Riot", "MMORPG", ["Mobile"]).
 game("Call Of Duty Mobile", "Activision", "FPS", ["Mobile"]).
 game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS", "Console"]).
 game("Minecraft: Pocket Edition", "Mojang", "Sandbox", ["Mobile"]).
@@ -109,3 +109,17 @@ game("Metro Exodus", "4A Games", "FPS", ["PC", "macOS", "Console"]).
 game("Borderlands Series", "Gearbox Software", "FPS", ["PC", "macOS", "Console"]).
 game("Wolfenstein Series", "MachineGames", "FPS", ["PC", "Console"]).
 game("Crysis Series", "Crytek", "FPS", ["PC", "Console"]).
+game("Clash of Clans", "Supercell", "RTS", ["Mobile"]).
+game("Clash Royale", "Supercell", "RTS", ["Mobile"]).
+game("Brawl Stars", "Supercell", "MMORPG", ["Mobile"]).
+game("Diablo Series", "Blizzard", "MMORPG", ["PC", "Console"]).
+game("Firewatch", "Panic", "Action-Adventure", ["PC", "macOS", "Console"]).
+game("Hearthstone", "Blizzard", "RTS", ["PC", "macOS", "Mobile"]).
+game("Civilization Series", "Sid Meier", "Puzzle", ["PC", "macOS", "Console"]).
+game("SimCity Series", "EA", "Sandbox", ["PC", "macOS"]).
+game("The Sims Series", "EA", "Sandbox", ["PC", "macOS", "Console"]).
+game("Resident Evil Series", "Capcom", "Action-Adventure", ["PC", "Console"]).
+game("Age of Empires Series", "Relic Entertainment", "RTS", ["PC", "macOS"]).
+game("Total War Series", "Creative Assembly", "RTS", ["PC", "macOS"]).
+game("StarCraft Series", "Blizzard", "RTS", ["PC", "macOS"]).
+game("Boom Beach", "Supercell", "RTS", ["Mobile"]).
