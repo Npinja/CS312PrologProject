@@ -66,7 +66,7 @@ game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
 game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
 game("Mario Party", "Nintendo", "Puzzle", ["PC", "macOS", "Console"]).
 game("Overcooked Series", "Team17", "Puzzle", ["PC", "Console").
-game("PlayerUnknown's Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile").
+game("PlayerUnknowns Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile").
 game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile").
 game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS").
 game("Super Smash Bros. Ultimate", "Bandai Namco", "Fighter", ["Console").
