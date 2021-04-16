@@ -4,7 +4,7 @@
 
 % WE ARE MAKING A GAME RECOMMENDER
 % Takes a list of games u play, recommends game you might want to try
-% TYPE -> MOBA, FPS, SANDBOX, RTS, RPG, SPORTS, PUZZLES
+% TYPE -> MMORPG, FPS, SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLES
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
@@ -34,15 +34,27 @@ filter_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _,
 
 % The following code contains the videogames their descriptions that will be used for queries 
 game("Valorant", "Riot", "FPS", ["PC"]).
-game("League Of Legends", "MOBA", "Riot", ["PC", "macOS"]).
-game("League Of Legends: Wild Rift", "MOBA", "Riot", ["Mobile"]).
+game("League Of Legends", "MMORPG", "Riot", ["PC", "macOS"]).
+game("League Of Legends: Wild Rift", "MMORPG", "Riot", ["Mobile"]).
 game("Call Of Duty Mobile", "Activision", "FPS", ["Mobile"]).
 game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS"]).
 game("Minecraft: Pocket Edition", "Mojang", "Sandbox", ["Mobile"]).
-game("Minesweeper", "Microsoft", "Puzzle", ["PC"])
-game("Solitaire", "Microsoft", "Puzzle", ["PC"])
-game("Halo Series", "343 Industries", "FPS", ["Console", "PC"])
-game("Call of Duty Series", "Activision", ["Console", "PC"])
-game("Tetris", "Microsoft", "Puzzle", ["PC"])
-
-
+game("Minesweeper", "Microsoft", "Puzzle", ["PC"]).
+game("Solitaire", "Microsoft", "Puzzle", ["PC"]).
+game("Halo Series", "343 Industries", "FPS", ["Console", "PC"]).
+game("Call of Duty Series", "Activision", "FPS" ["Console", "PC"]).
+game("Tetris", "SEGA", "Puzzle", ["PC", "macOS", "Mobile"]).
+game("Pacman", "Bandai Namco", "Maze", ["PC", "macOS", "Mobile"]).
+game("World of Warcraft", "Blizzard Entertainment", "MMORPG", ["PC", "macOS"]).
+game("Overwatch", "Blizzard Entertainment", "FPS", ["PC", "Console"]).
+game("Among Us", "InnerSloth LLC", "Puzzle", ["PC", "macOS", "Mobile"]).
+game("Fortnite", "Epic Games", "Battle Royale", ["Console", "PC", "Mobile"]).
+game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS", "Mobile"]).
+game("Grand Theft Auto Series", "Rockstar Games", "Sandbox", ["PC", "Console"]).
+game("The Legend of Zelda: Breath of the Wild", "Nintendo", "Action-Adventure", ["Console"]).
+game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS"]).
+game("Animal Crossing: New Horizons", "Nintendo", "Sandbox", ["Console"]).
+game("Super Mario 64", "Nintendo", "Action-Adventure", ["Console"]).
+game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
+game("NBA 2K Series", "2K Games", "Sports", ["PC", "Console"]).
+game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS"]).
