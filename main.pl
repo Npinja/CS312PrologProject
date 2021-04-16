@@ -8,6 +8,39 @@
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
+
+start :- 
+    write("---- Video Game Recommender ---- \n\n"),
+    write("Type recommend to get started").
+
+recommend :-
+	write("What games have you played before (ex. [\"Valorant\", \"Pokemon Series\"])\n"), 
+	read(PG),
+	write("Would you only like games that are on platforms you've played on before? (0 for no 1 for yes) \n"),
+	read(LockPlatform),
+	write("What are the maximum number of games would you like?\n"),
+	read(MR),
+	recommendgames(PG, LockPlatform, MR, Games),
+    write("\n Here Are Your Results: \n\n"),
+    writeList(Games).
+
+writeList([]).
+writeList([H|T]) :- game(H, Company, Type, Platforms),
+    write("Name: "),
+    write(H),
+    write("\n"),
+    write("Created By: "),
+    write(Company),
+    write("\n"),
+    write("Game Type: "),
+    write(Type),
+    write("\n"),
+    write("Platforms: "),
+    write(Platforms),
+    write("\n\n"),
+    writeList(T).
+
+
 % recommendgames is the main entry point of the program
 % GamesAlreadyPlayed is a LIST of game names that the user has already played before.
 % LockPlatform is 0 if the user wants to see games that are outside their platform and 1 if they only want to see games on platforms they already play on.
