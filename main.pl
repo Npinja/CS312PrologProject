@@ -65,3 +65,4 @@ game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
 game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
 game("Mario Party", "Nintendo", "Puzzle", ["PC", "macOS", "Console"]).
+game("Overcooked Series", "Team17", "Puzzle", ["PC", "Console").
