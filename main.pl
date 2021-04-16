@@ -50,7 +50,7 @@ game("Among Us", "InnerSloth LLC", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("Fortnite", "Epic Games", "Battle-Royale", ["Console", "PC", "Mobile"]).
 game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS", "Mobile"]).
 game("Grand Theft Auto Series", "Rockstar Games", "Sandbox", ["PC", "Console"]).
-game("The Legend of Zelda: Breath of the Wild", "Nintendo", "Action-Adventure", ["Console"]).
+game("The Legend of Zelda Series", "Nintendo", "Action-Adventure", ["Console"]).    
 game("Animal Crossing: New Horizons", "Nintendo", "Sandbox", ["Console"]).
 game("Super Mario 64", "Nintendo", "Action-Adventure", ["Console"]).
 game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
@@ -61,13 +61,13 @@ game("Cyberpunk 2077", "CD Projekt", "Sandbox", ["Console", "PC"]).
 game("Pokemon Series", "Nintendo", "Action-Adventure", ["Console"]).
 game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
-game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
+game("Mario Kart Series", "Nintendo", "Sports", ["Console", "Mobile"]).
 game("Mario Party", "Nintendo", "Action-Adventure", ["PC", "macOS", "Console"]).
 game("Overcooked Series", "Team17", "Action-Adventure", ["PC", "Console"]).
 game("PlayerUnknown's Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile"]).
 game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS"]).
-game("Super Smash Bros. Ultimate", "Bandai Namco", "Fighter", ["Console"]).
+game("Super Smash Bros. Ultimate", "Nintendo", "Fighter", ["Console"]).
 game("Wii Sports", "Nintendo", "Sports", ["Console"]).
 game("Wii Sports Resort", "Nintendo", "Sports", ["Console"]).
 game("Street Fighter Series", "Capcom", "Fighter", ["PC", "Console"]).
@@ -123,3 +123,4 @@ game("Age of Empires Series", "Relic Entertainment", "RTS", ["PC", "macOS"]).
 game("Total War Series", "Creative Assembly", "RTS", ["PC", "macOS"]).
 game("StarCraft Series", "Blizzard", "RTS", ["PC", "macOS"]).
 game("Boom Beach", "Supercell", "RTS", ["Mobile"]).
+game("Pummel Party", "Rebuilt Games", "Action-Adventure", ["PC"]).
