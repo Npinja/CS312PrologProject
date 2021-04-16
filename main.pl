@@ -31,7 +31,6 @@ doesIntersect(X,Y) :-
 
 filter_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _, _, CurrentPlatforms), (doesIntersect(Platforms, CurrentPlatforms); filter_platform(T, GameName)).
 
-
 % The following code contains the videogames and their descriptions that will be used for queries 
 game("Valorant", "Riot", "FPS", ["PC"]).
 game("League Of Legends", "MMORPG", "Riot", ["PC", "macOS"]).
@@ -42,7 +41,7 @@ game("Minecraft: Pocket Edition", "Mojang", "Sandbox", ["Mobile"]).
 game("Minesweeper", "Microsoft", "Puzzle", ["PC"]).
 game("Solitaire", "Microsoft", "Puzzle", ["PC"]).
 game("Halo Series", "343 Industries", "FPS", ["Console", "PC"]).
-game("Call of Duty Series", "Activision", "FPS" ["Console", "PC"]).
+game("Call of Duty Series", "Activision", "FPS", ["Console", "PC"]).
 game("Tetris", "SEGA", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("Pacman", "Bandai Namco", "Maze", ["PC", "macOS", "Mobile"]).
 game("World of Warcraft", "Blizzard Entertainment", "MMORPG", ["PC", "macOS"]).
@@ -59,25 +58,25 @@ game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
 game("NBA 2K Series", "2K Games", "Sports", ["PC", "Console"]).
 game("NHL Series", "EA Sports", "Sports", ["Console"]).
 game("FIFA Series", "EA Sports", "Sports", ["Mobile", "Console", "PC"]).
-game("Cyberpunk 2077", "CD Projekt", "Sandbox, ["Console", "PC"]).
+game("Cyberpunk 2077", "CD Projekt", "Sandbox", ["Console", "PC"]).
 game("Pokemon Series", "Nintendo", "MMORPG", ["Console"]).
 game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
 game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
 game("Mario Party", "Nintendo", "Puzzle", ["PC", "macOS", "Console"]).
-game("Overcooked Series", "Team17", "Puzzle", ["PC", "Console").
-game("PlayerUnknown's Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile").
-game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile").
-game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS").
-game("Super Smash Bros. Ultimate", "Bandai Namco", "Fighter", ["Console").
-game("Wii Sports", "Nintendo", "Sports", ["Console").
-game("Street Fighter Series", "Capcom", "Fighter", ["PC", "Console").
-game("Mortal Kombat Series", "NetherRealm Studios", "Fighter", ["PC", "Console").
-game("Tekken Series", "Bandai Namco", "Fighter", ["PC", "Console").
-game("Marvel vs. Capcom Series", "Capcom", "Fighter", ["PC", "Console").
-game("Apex Legends", "Respawn Entertainment", "Battle-Royale", ["PC", "Console").
-game("Call of Duty: Warzone", "Activision", "Battle-Royale", ["PC", "Console").
-game("ZombsRoyale.io", "Yangcheng Liu", "Battle-Royale", ["PC", "Mobile").
-game("Agar.io", "Miniclip", "Action-Adventure", ["PC", "Mobile", "macOS").
-game("Slither.io", "Lowtech Studios", "Action-Adventure", ["PC", "Mobile").
-game("Battlefield Series", "EA", "FPS", ["PC", "Console").
+game("Overcooked Series", "Team17", "Puzzle", ["PC", "Console"]).
+game("PlayerUnknown's Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile"]).
+game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile"]).
+game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS"]).
+game("Super Smash Bros. Ultimate", "Bandai Namco", "Fighter", ["Console"]).
+game("Wii Sports", "Nintendo", "Sports", ["Console"]).
+game("Street Fighter Series", "Capcom", "Fighter", ["PC", "Console"]).
+game("Mortal Kombat Series", "NetherRealm Studios", "Fighter", ["PC", "Console"]).
+game("Tekken Series", "Bandai Namco", "Fighter", ["PC", "Console"]).
+game("Marvel vs. Capcom Series", "Capcom", "Fighter", ["PC", "Console"]).
+game("Apex Legends", "Respawn Entertainment", "Battle-Royale", ["PC", "Console"]).
+game("Call of Duty: Warzone", "Activision", "Battle-Royale", ["PC", "Console"]).
+game("ZombsRoyale.io", "Yangcheng Liu", "Battle-Royale", ["PC", "Mobile"]).
+game("Agar.io", "Miniclip", "Action-Adventure", ["PC", "Mobile", "macOS"]).
+game("Slither.io", "Lowtech Studios", "Action-Adventure", ["PC", "Mobile"]).
+game("Battlefield Series", "EA", "FPS", ["PC", "Console"]).
