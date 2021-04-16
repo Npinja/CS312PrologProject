@@ -52,14 +52,14 @@ game("Fortnite", "Epic Games", "Battle-Royale", ["Console", "PC", "Mobile"]).
 game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS", "Mobile"]).
 game("Grand Theft Auto Series", "Rockstar Games", "Sandbox", ["PC", "Console"]).
 game("The Legend of Zelda: Breath of the Wild", "Nintendo", "Action-Adventure", ["Console"]).
-game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS"]).
+game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS", "Console"]).
 game("Animal Crossing: New Horizons", "Nintendo", "Sandbox", ["Console"]).
 game("Super Mario 64", "Nintendo", "Action-Adventure", ["Console"]).
 game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
 game("NBA 2K Series", "2K Games", "Sports", ["PC", "Console"]).
 game("NHL Series", "EA Sports", "Sports", ["Console"]).
 game("FIFA Series", "EA Sports", "Sports", ["Mobile", "Console", "PC"]).
-game("Cyberpunk 2077", "CD Projekt", "Sandbox, ["Console", "PC"]).
+game("Cyberpunk 2077", "CD Projekt", "Sandbox", ["Console", "PC"]).
 game("Pokemon Series", "Nintendo", "MMORPG", ["Console"]).
 game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
