@@ -8,16 +8,32 @@
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
-% DISTANCE FORMULA: SAME GAME TYPE (3) (1) PLATFORM (100)
-
 % recommendGames(GamesAlreadyPlayed, LockPlatform, MaxResults, RecommendedGames).
 
 recommendgames([], _, _, RecommendedGames) :- allgames(RecommendedGames).
-recommendgames(GamesAlreadyPlayed, LockPlatform, MaxResults, RecommendedGames) :- findall(Name, is_valid_game(GamesAlreadyPlayed, LockPlatform, MaxResults, Name), RecommendedGames).
+recommendgames(GamesAlreadyPlayed, LockPlatform, MaxResults, RecommendedGames) :- findall(Name, is_valid_game(GamesAlreadyPlayed, LockPlatform, Name), PotentialGames)
+    , build_recommended_games(GamesAlreadyPlayed, PotentialGames, MaxResults, RecommendedGames).
 
-is_valid_game(GamesAlreadyPlayed, LockPlatform, MaxResults, GameName) :- 
-    game(GameName, _,_,_), doesnt_contain(GamesAlreadyPlayed, GameName), filter_platform(GamesAlreadyPlayed, GameName).
+is_valid_game(GamesAlreadyPlayed, 0, GameName) :- game(GameName, _,_,_), doesnt_contain(GamesAlreadyPlayed, GameName).
+is_valid_game(GamesAlreadyPlayed, 1, GameName) :- 
+    game(GameName, _,_,_), doesnt_contain(GamesAlreadyPlayed, GameName), is_valid_platform(GamesAlreadyPlayed, GameName).
 
+build_recommended_games(GP, PG, MR, FinalList) :- include(all_three_matching(GP), PG, X)
+    , exclude(all_three_matching(GP), PG, R1), include(platform_type_matching(GP), R1, Y)
+    , exclude(platform_type_matching(GP), R1, R2), include(platform_company_matching(GP), R2, Z)
+    , exclude(platform_company_matching(GP), R2, R3), include(platform(GP), R3, V)
+    , exclude(platform(GP), R3, R4), include(type_company_matching(GP), R4, B)
+    , append(X, Y, Q), append(Q, Z, U), append(U, V, C), append(C,B, G), take(G, MR, FinalList).
+
+all_three_matching(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName), is_valid_game_type(GamesAlreadyPlayed, GameName), is_valid_company(GamesAlreadyPlayed, GameName).
+platform_type_matching(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName), is_valid_game_type(GamesAlreadyPlayed, GameName).
+platform_company_matching(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName), is_valid_company(GamesAlreadyPlayed, GameName).
+platform(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName).
+type_company_matching(GamesAlreadyPlayed, GameName) :- is_valid_company(GamesAlreadyPlayed, GameName), is_valid_game_type(GamesAlreadyPlayed, GameName).
+%just type
+%just company
+
+take(Src,N,L) :- findall(E, (nth1(I,Src,E), I =< N), L).
 allgames(R) :- findall(Q, game(Q, _, _, _), R).
 
 doesnt_contain([],_).
@@ -29,7 +45,12 @@ doesIntersect(X,Y) :-
     intersection(X,Y,Z),
     dif(Z,[]).
 
-filter_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _, _, CurrentPlatforms), (doesIntersect(Platforms, CurrentPlatforms); filter_platform(T, GameName)).
+%checks if the game shares a platform with a game you already play
+is_valid_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _, _, CurrentPlatforms), (doesIntersect(Platforms, CurrentPlatforms); is_valid_platform(T, GameName)).
+%checks if the game shares a game type with a game you already play
+is_valid_game_type([H|T], GameName) :- game(GameName, _ , GameType, _), game(H, _, OtherGameType, _), (not(dif(GameType, OtherGameType)); is_valid_game_type(T, GameName)).
+%checks if the game shares a company a game you already play
+is_valid_company([H|T], GameName) :- game(GameName, Company , _, _), game(H, OtherCompany, _, _), (not(dif(Company, OtherCompany)); is_valid_company(T, GameName)).
 
 % The following code contains the videogames and their descriptions that will be used for queries 
 game("Valorant", "Riot", "FPS", ["PC"]).
@@ -40,7 +61,7 @@ game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS"]).
 game("Minecraft: Pocket Edition", "Mojang", "Sandbox", ["Mobile"]).
 game("Minesweeper", "Microsoft", "Puzzle", ["PC"]).
 game("Solitaire", "Microsoft", "Puzzle", ["PC"]).
-game("Halo Series", "343 Industries", "FPS", ["Console", "PC"]).
+game("Halo Series", "343 Industries", "FPS", ["Console"]).
 game("Call of Duty Series", "Activision", "FPS", ["Console", "PC"]).
 game("Tetris", "SEGA", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("Pacman", "Bandai Namco", "Maze", ["PC", "macOS", "Mobile"]).
@@ -51,7 +72,6 @@ game("Fortnite", "Epic Games", "Battle-Royale", ["Console", "PC", "Mobile"]).
 game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS", "Mobile"]).
 game("Grand Theft Auto Series", "Rockstar Games", "Sandbox", ["PC", "Console"]).
 game("The Legend of Zelda: Breath of the Wild", "Nintendo", "Action-Adventure", ["Console"]).
-game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS", "Console"]).
 game("Animal Crossing: New Horizons", "Nintendo", "Sandbox", ["Console"]).
 game("Super Mario 64", "Nintendo", "Action-Adventure", ["Console"]).
 game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
