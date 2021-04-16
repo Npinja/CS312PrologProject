@@ -8,31 +8,42 @@
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
-% recommendGames(GamesAlreadyPlayed, LockPlatform, MaxResults, RecommendedGames).
-
+% recommendgames is the main entry point of the program
+% GamesAlreadyPlayed is a LIST of game names that the user has already played before.
+% LockPlatform is 0 if the user wants to see games that are outside their platform and 1 if they only want to see games on platforms they already play on.
+% MaxResults is the maximum number of recommendations the user wants from the recommender.
+% RecommendedGames is the list of names of games the user might want to try out.
 recommendgames([], _, _, RecommendedGames) :- allgames(RecommendedGames).
 recommendgames(GamesAlreadyPlayed, LockPlatform, MaxResults, RecommendedGames) :- findall(Name, is_valid_game(GamesAlreadyPlayed, LockPlatform, Name), PotentialGames)
     , build_recommended_games(GamesAlreadyPlayed, PotentialGames, MaxResults, RecommendedGames).
 
+% Determines whether a game should be a potential recommendation (havent been played before and shares a platform with a game you already play)
 is_valid_game(GamesAlreadyPlayed, 0, GameName) :- game(GameName, _,_,_), doesnt_contain(GamesAlreadyPlayed, GameName).
 is_valid_game(GamesAlreadyPlayed, 1, GameName) :- 
     game(GameName, _,_,_), doesnt_contain(GamesAlreadyPlayed, GameName), is_valid_platform(GamesAlreadyPlayed, GameName).
 
+% Builds the list of recommended games by a tier order that we decided was best
+% 1) Type, Company and Platform
+% 2) Type, Platform
+% 3) Company, Platform
+% 4) Platform
+% 5) Type, Company
+% 6) Type
 build_recommended_games(GP, PG, MR, FinalList) :- include(all_three_matching(GP), PG, X)
     , exclude(all_three_matching(GP), PG, R1), include(platform_type_matching(GP), R1, Y)
     , exclude(platform_type_matching(GP), R1, R2), include(platform_company_matching(GP), R2, Z)
     , exclude(platform_company_matching(GP), R2, R3), include(platform(GP), R3, V)
     , exclude(platform(GP), R3, R4), include(type_company_matching(GP), R4, B)
-    , append(X, Y, Q), append(Q, Z, U), append(U, V, C), append(C,B, G), take(G, MR, FinalList).
+    , exclude(platform(GP), R4, R5), include(is_valid_game_type(GP), R5,K)
+    , append(X, Y, Q), append(Q, Z, U), append(U, V, C), append(C,B, G), append(G, K, T), take(T, MR, FinalList).
 
 all_three_matching(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName), is_valid_game_type(GamesAlreadyPlayed, GameName), is_valid_company(GamesAlreadyPlayed, GameName).
 platform_type_matching(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName), is_valid_game_type(GamesAlreadyPlayed, GameName).
 platform_company_matching(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName), is_valid_company(GamesAlreadyPlayed, GameName).
 platform(GamesAlreadyPlayed, GameName) :- is_valid_platform(GamesAlreadyPlayed, GameName).
 type_company_matching(GamesAlreadyPlayed, GameName) :- is_valid_company(GamesAlreadyPlayed, GameName), is_valid_game_type(GamesAlreadyPlayed, GameName).
-%just type
-%just company
 
+%Takes the first N results from the Src
 take(Src,N,L) :- findall(E, (nth1(I,Src,E), I =< N), L).
 allgames(R) :- findall(Q, game(Q, _, _, _), R).
 
