@@ -4,7 +4,7 @@
 
 % WE ARE MAKING A GAME RECOMMENDER
 % Takes a list of games u play, recommends game you might want to try
-% TYPE -> MMORPG, FPS, SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLES, BATTLE-ROYALE, FIGHTER
+% TYPE -> MMORPG, FPS, SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLE, BATTLE-ROYALE, FIGHTER
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
@@ -43,7 +43,7 @@ game("Solitaire", "Microsoft", "Puzzle", ["PC"]).
 game("Halo Series", "343 Industries", "FPS", ["Console", "PC"]).
 game("Call of Duty Series", "Activision", "FPS", ["Console", "PC"]).
 game("Tetris", "SEGA", "Puzzle", ["PC", "macOS", "Mobile"]).
-game("Pacman", "Bandai Namco", "Maze", ["PC", "macOS", "Mobile"]).
+game("Pacman", "Bandai Namco", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("World of Warcraft", "Blizzard Entertainment", "MMORPG", ["PC", "macOS"]).
 game("Overwatch", "Blizzard Entertainment", "FPS", ["PC", "Console"]).
 game("Among Us", "InnerSloth LLC", "Puzzle", ["PC", "macOS", "Mobile"]).
@@ -62,8 +62,8 @@ game("Pokemon Series", "Nintendo", "MMORPG", ["Console"]).
 game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
 game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
-game("Mario Party", "Nintendo", "Puzzle", ["PC", "macOS", "Console"]).
-game("Overcooked Series", "Team17", "Puzzle", ["PC", "Console"]).
+game("Mario Party", "Nintendo", "Action-Adventure", ["PC", "macOS", "Console"]).
+game("Overcooked Series", "Team17", "Action-Adventure", ["PC", "Console"]).
 game("PlayerUnknown's Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile"]).
 game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS"]).
@@ -79,3 +79,5 @@ game("ZombsRoyale.io", "Yangcheng Liu", "Battle-Royale", ["PC", "Mobile"]).
 game("Agar.io", "Miniclip", "Action-Adventure", ["PC", "Mobile", "macOS"]).
 game("Slither.io", "Lowtech Studios", "Action-Adventure", ["PC", "Mobile"]).
 game("Battlefield Series", "EA", "FPS", ["PC", "Console"]).
+game("Tomb Raider", "Crystal Dynamics", "Action-Adventure", ["PC", "macOS", "Console").
+game("The Elder Scrolls Series", "Bethesda", "Action-Adventure", ["PC", "Console").
