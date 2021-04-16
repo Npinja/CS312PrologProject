@@ -57,4 +57,11 @@ game("Animal Crossing: New Horizons", "Nintendo", "Sandbox", ["Console"]).
 game("Super Mario 64", "Nintendo", "Action-Adventure", ["Console"]).
 game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
 game("NBA 2K Series", "2K Games", "Sports", ["PC", "Console"]).
-game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS"]).
+game("NHL Series", "EA Sports", "Sports", ["Console"]).
+game("FIFA Series", "EA Sports", "Sports", ["Mobile", "Console", "PC"]).
+game("Cyberpunk", "CD Projekt", "Sandbox, ["Console", "PC"]).
+game("Pokemon Series", "Nintendo", "MMORPG", ["Console"]).
+game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
+game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
+game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
+game("Mario Party", "Nintendo", "Puzzle", ["PC", "macOS", "Console"]).
