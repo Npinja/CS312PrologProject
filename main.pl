@@ -98,9 +98,9 @@ is_valid_company([H|T], GameName) :- game(GameName, Company , _, _), game(H, Oth
 
 % The following code contains the videogames and their descriptions that will be used for queries 
 game("Valorant", "Riot", "FPS", ["PC"]).
-game("League Of Legends", "Riot", "MMORPG", ["PC", "macOS"]).
-game("League Of Legends: Wild Rift", "Riot", "MMORPG", ["Mobile"]).
-game("Call Of Duty Mobile", "Activision", "FPS", ["Mobile"]).
+game("League of Legends", "Riot", "MMORPG", ["PC", "macOS"]).
+game("League of Legends: Wild Rift", "Riot", "MMORPG", ["Mobile"]).
+game("Call of Duty Mobile", "Activision", "FPS", ["Mobile"]).
 game("Minecraft", "Mojang", "Sandbox", ["PC", "macOS", "Console"]).
 game("Minecraft: Pocket Edition", "Mojang", "Sandbox", ["Mobile"]).
 game("Minesweeper", "Microsoft", "Puzzle", ["PC"]).
