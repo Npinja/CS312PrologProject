@@ -58,7 +58,7 @@ game("NBA 2K Series", "2K Games", "Sports", ["PC", "Console"]).
 game("NHL Series", "EA Sports", "Sports", ["Console"]).
 game("FIFA Series", "EA Sports", "Sports", ["Mobile", "Console", "PC"]).
 game("Cyberpunk 2077", "CD Projekt", "Sandbox", ["Console", "PC"]).
-game("Pokemon Series", "Nintendo", "MMORPG", ["Console"]).
+game("Pokemon Series", "Nintendo", "Action-Adventure", ["Console"]).
 game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
 game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
@@ -69,6 +69,7 @@ game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile"]).
 game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS"]).
 game("Super Smash Bros. Ultimate", "Bandai Namco", "Fighter", ["Console"]).
 game("Wii Sports", "Nintendo", "Sports", ["Console"]).
+game("Wii Sports Resort", "Nintendo", "Sports", ["Console"]).
 game("Street Fighter Series", "Capcom", "Fighter", ["PC", "Console"]).
 game("Mortal Kombat Series", "NetherRealm Studios", "Fighter", ["PC", "Console"]).
 game("Tekken Series", "Bandai Namco", "Fighter", ["PC", "Console"]).
@@ -79,5 +80,32 @@ game("ZombsRoyale.io", "Yangcheng Liu", "Battle-Royale", ["PC", "Mobile"]).
 game("Agar.io", "Miniclip", "Action-Adventure", ["PC", "Mobile", "macOS"]).
 game("Slither.io", "Lowtech Studios", "Action-Adventure", ["PC", "Mobile"]).
 game("Battlefield Series", "EA", "FPS", ["PC", "Console"]).
-game("Tomb Raider", "Crystal Dynamics", "Action-Adventure", ["PC", "macOS", "Console").
-game("The Elder Scrolls Series", "Bethesda", "Action-Adventure", ["PC", "Console").
+game("Tomb Raider", "Crystal Dynamics", "Action-Adventure", ["PC", "macOS", "Console"]).
+game("The Elder Scrolls Series", "Bethesda", "Action-Adventure", ["PC", "Console"]).
+game("Assasins Creed Series", "Ubisoft", "Action-Adventure", ["PC", "Console", "macOS"]).
+game("Marvel's Avengers", "Square Enix", "Action-Adventure", ["PC", "Console"]).
+game("Marvel's Spider-Man: Miles Morales", "Insomniac Games", "Action-Adventure", ["Console"]).
+game("Monument Valley", "ustwogames", "Puzzle", ["Mobile"]).
+game("2048", "Solebon LLC", "Puzzle", ["Mobile"]).
+game("Portal 2", "Valve", "Puzzle", ["PC", "macOS", "Console"]).
+game("Star Wars Jedi: Fallen Order", "Respawn Entertainment", "Action-Adventure", ["PC", "Console"]).
+game("Rocket League", "Psyonix", "Sports", ["PC", "macOS", "Console"]).
+game("PGA Tour Series", "2K Games", "Sports", ["PC", "Console"]).
+game("Pong", "Atari", "Sports", ["PC", "macOS", "Mobile"]).
+game("Runescape", "Jagex", "MMORPG", ["PC", "macOS"]).
+game("Genshin Impact", "miHoYo", "Action-Adventure", ["PC", "Mobile", "Console"]).
+game("Roblox", "Roblox Corporation", "MMORPG", ["PC", "macOS", "Console"]).
+game("Terraria", "Re-Logic", "Sandbox", ["PC", "macOS", "Console"]).
+game("Garry's Mod", "Facepunch Studios Ltd", "Sandbox", ["PC", "macOS"]).
+game("Half-Life Series", "Valve", "FPS", ["PC", "Console"]).
+game("Team Fortress 2", "Valve", "FPS", ["PC", "macOS", "Console"]).
+game("Tom Clancy's Rainbow Six Siege", "Ubisoft", "FPS", ["PC", "Console"]).
+game("Destiny 2", "Bungie Inc", "FPS", ["PC", "Console"]).
+game("DOOM Eternal", "Bethesda", "FPS", ["PC", "Console"]).
+game("Far Cry Series", "Ubisoft", "FPS", ["PC", "Console"]).
+game("Titanfall 2", "Respawn Entertainment", "FPS", ["PC", "Console"]).
+game("BioShock Series", "Irrational Games", "FPS", ["PC", "macOS", "Console"]).
+game("Metro Exodus", "4A Games", "FPS", ["PC", "macOS", "Console"]).
+game("Borderlands Series", "Gearbox Software", "FPS", ["PC", "macOS", "Console"]).
+game("Wolfenstein Series", "MachineGames", "FPS", ["PC", "Console"]).
+game("Crysis Series", "Crytek", "FPS", ["PC", "Console"]).
