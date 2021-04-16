@@ -4,7 +4,7 @@
 
 % WE ARE MAKING A GAME RECOMMENDER
 % Takes a list of games u play, recommends game you might want to try
-% TYPE -> MMORPG, FPS, SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLES
+% TYPE -> MMORPG, FPS, SANDBOX, ACTION-ADVENTURE, SPORTS, PUZZLES, BATTLE-ROYALE, FIGHTER
 % COMPANY -> RIOT ACTIVISION BLIZZARD
 % PLATFORM -> [macOS, PC, Mobile, Console]
 
@@ -32,7 +32,7 @@ doesIntersect(X,Y) :-
 filter_platform([H|T], GameName) :- game(GameName, _ , _, Platforms), game(H, _, _, CurrentPlatforms), (doesIntersect(Platforms, CurrentPlatforms); filter_platform(T, GameName)).
 
 
-% The following code contains the videogames their descriptions that will be used for queries 
+% The following code contains the videogames and their descriptions that will be used for queries 
 game("Valorant", "Riot", "FPS", ["PC"]).
 game("League Of Legends", "MMORPG", "Riot", ["PC", "macOS"]).
 game("League Of Legends: Wild Rift", "MMORPG", "Riot", ["Mobile"]).
@@ -48,7 +48,7 @@ game("Pacman", "Bandai Namco", "Maze", ["PC", "macOS", "Mobile"]).
 game("World of Warcraft", "Blizzard Entertainment", "MMORPG", ["PC", "macOS"]).
 game("Overwatch", "Blizzard Entertainment", "FPS", ["PC", "Console"]).
 game("Among Us", "InnerSloth LLC", "Puzzle", ["PC", "macOS", "Mobile"]).
-game("Fortnite", "Epic Games", "Battle Royale", ["Console", "PC", "Mobile"]).
+game("Fortnite", "Epic Games", "Battle-Royale", ["Console", "PC", "Mobile"]).
 game("Sneaky Sasquatch", "RAC7 Games", "Sandbox", ["macOS", "Mobile"]).
 game("Grand Theft Auto Series", "Rockstar Games", "Sandbox", ["PC", "Console"]).
 game("The Legend of Zelda: Breath of the Wild", "Nintendo", "Action-Adventure", ["Console"]).
@@ -59,10 +59,25 @@ game("Madden NFL Series", "EA Sports", "Sports", ["PC", "Console", "Mobile"]).
 game("NBA 2K Series", "2K Games", "Sports", ["PC", "Console"]).
 game("NHL Series", "EA Sports", "Sports", ["Console"]).
 game("FIFA Series", "EA Sports", "Sports", ["Mobile", "Console", "PC"]).
-game("Cyberpunk", "CD Projekt", "Sandbox, ["Console", "PC"]).
+game("Cyberpunk 2077", "CD Projekt", "Sandbox, ["Console", "PC"]).
 game("Pokemon Series", "Nintendo", "MMORPG", ["Console"]).
 game("Pokemon Go", "Niantic", "Action-Adventure", ["Mobile"]).
 game("Counter Strike: Global Offensive", "Valve", "FPS", ["PC", "macOS"]).
 game("Mario Kart", "Nintendo", "Sports", ["Console", "Mobile"]).
 game("Mario Party", "Nintendo", "Puzzle", ["PC", "macOS", "Console"]).
 game("Overcooked Series", "Team17", "Puzzle", ["PC", "Console").
+game("PlayerUnknown's Battlegrounds", "PUBG Corporation", "Battle-Royale", ["PC", "Console", "Mobile").
+game("Candy Crush Saga", "King", "Puzzle", ["PC", "macOS", "Mobile").
+game("DOTA 2", "Valve", "MMORPG", ["PC", "macOS").
+game("Super Smash Bros. Ultimate", "Bandai Namco", "Fighter", ["Console").
+game("Wii Sports", "Nintendo", "Sports", ["Console").
+game("Street Fighter Series", "Capcom", "Fighter", ["PC", "Console").
+game("Mortal Kombat Series", "NetherRealm Studios", "Fighter", ["PC", "Console").
+game("Tekken Series", "Bandai Namco", "Fighter", ["PC", "Console").
+game("Marvel vs. Capcom Series", "Capcom", "Fighter", ["PC", "Console").
+game("Apex Legends", "Respawn Entertainment", "Battle-Royale", ["PC", "Console").
+game("Call of Duty: Warzone", "Activision", "Battle-Royale", ["PC", "Console").
+game("ZombsRoyale.io", "Yangcheng Liu", "Battle-Royale", ["PC", "Mobile").
+game("Agar.io", "Miniclip", "Action-Adventure", ["PC", "Mobile", "macOS").
+game("Slither.io", "Lowtech Studios", "Action-Adventure", ["PC", "Mobile").
+game("Battlefield Series", "EA", "FPS", ["PC", "Console").
